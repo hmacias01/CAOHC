@@ -1,0 +1,55 @@
+<div class="form-vw">
+    <div class="container pacientesLista">
+        <form action="">
+            <div class="form-group">
+                <label for="Cedula">Numero de Cedula</label>
+                <input #input type="text" class="form-control" id="Cedula" aria-describedby="emailHelp" placeholder="Ingrese numero de cedula">
+                <button (click)="buscarPacientes( input.value )" class="btn btn-primary" style="margin-top:1rem">Buscar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container pacientesLista">
+        <div class="row justify-content-center container-row">
+            <h3 class="">Lista de empleados</h3>
+        </div>
+        <table class="table table-bordered ">
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pacientes of paciente">
+                    <td>
+                        {{ pacientes.Cedula }}
+                    </td>
+                    <td>
+                        {{ pacientes.Nombre }}
+                    </td>
+                    <td>
+                        <button [routerLink]="['/otoscopia', pacientes.Cedula ]" class="btn btn-primary listar-btn">  
+                                <i class="fa fa-edit"></i>
+                              </button>
+
+                        <!-- <button (click)="" class="btn btn-danger">
+                                <i class="fa fa-trash-o"></i>
+                              </button> -->
+                        <button [routerLink]="['/tablas', pacientes.Cedula ]" class="btn btn-success listar-btn">  
+                                <i class="fa fa-edit"></i>
+                              </button>
+                    </td>
+                    <td>
+                        <button (click)="borrarPaciente(pacientes.Cedula)" class="btn btn-danger listar-btn">  
+                                    <i class="fa fa-edit"></i>
+                                  </button>
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

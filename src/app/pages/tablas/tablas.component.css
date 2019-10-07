@@ -1,0 +1,40 @@
+.form-container {
+    background-color: white;
+}
+
+.pacientesLista {
+    display: inline-block;
+    width: 41rem;
+}
+
+label,
+input {
+    display: inline-block;
+}
+
+.date-input {
+    display: inline-block;
+}
+
+.date-label {
+    display: block !important;
+}
+
+.check-div {
+    display: inline-block;
+}
+
+.input-inline {
+    display: inline-block;
+}
+
+.form-group {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    margin-bottom: 0;
+}
+
+.radio-container {
+    display: inline-block;
+    float: right;
+}

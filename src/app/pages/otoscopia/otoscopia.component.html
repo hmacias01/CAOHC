@@ -1,0 +1,887 @@
+<div class="form-vw">
+    <div class="container form-container">
+        <div class="row justify-content-center container-row">
+            <h3 class="">INFORME</h3>
+        </div>
+        <form [formGroup]="forma" (ngSubmit)="GuardarOtoscopia()">
+            <h4 class=" text-center ">Otoscopia</h4>
+            <div class="form-group ">
+
+                <h5>Oreja</h5>
+                <div class="col-3 inline-content">
+                    <label>Normal: </label>
+                    <!-- <div class="form-check form-check-inline ">
+                        <input formControlName="NormalD" name="NormalD" class="form-check-input" type="checkbox" id="orejaChkNormal-D" value="SI">
+                        <label class="form-check-label " for="orejaChkNormal-D">D</label>
+                    </div>
+                    <div class="form-check form-check-inline ">
+                        <input formControlName="NormalI" name="NormalI" class="form-check-input" type="checkbox" id="orejaChkNormal-I" value="SI">
+                        <label class="form-check-label " for="orejaChkNormal-I">I</label>
+                    </div> -->
+                    <select formControlName="Normal" name="Normal" id="orejaSelNormal" class="form-control">
+                        <option value="No" selected>Ninguna</option>
+                        <option value="Si-D">Si D</option>
+                        <option value="Si-I">Si I</option>
+                        <option value="Ambas">Ambas</option>
+                    </select>
+                </div>
+                <div class="col-3 inline-content">
+                    <label>Alteracion Congenita</label>
+                    <!-- <div class="form-check form-check-inline ">
+                        <input formControlName="AlteracionCongenitaD" name="AlteracionCongenitaD" class="form-check-input " type="checkbox" id="orejaAlteracionCongenita-D" value="SI">
+                        <label class="form-check-label " for="orejaAlteracionCongenita-D">D</label>
+                    </div>
+                    <div class="form-check form-check-inline ">
+                        <input formControlName="AlteracionCongenitaI" name="AlteracionCongenitaI" class="form-check-input " type="checkbox" id="orejaAlteracionCongenita-I" value="SI">
+                        <label class="form-check-label " for="orejaAlteracionCongenita-I ">I</label>
+                    </div> -->
+                    <select formControlName="AlteracionCongenita" name="AlteracionCongenita" id="orejaSelAlteracionCongenita" class="form-control">
+                        <option value="No" selected>Ninguna</option>
+                        <option value="Si-D">Si D</option>
+                        <option value="Si-I">Si I</option>
+                        <option value="Ambas">Ambas</option>
+                    </select>
+                </div>
+                <div class="col-2 inline-content">
+                    <label>Ausente</label>
+                    <!-- <div class="form-check form-check-inline ">
+                        <input formControlName="AusenteD" name="AusenteD" class="form-check-input " type="checkbox" id="orejaAusente-D " value="X">
+                        <label class="form-check-label " for="orejaAusente-D ">D</label>
+                    </div>
+                    <div class="form-check form-check-inline ">
+                        <input formControlName="AusenteI" name="AusenteI" class="form-check-input " type="checkbox" id="orejaAusente-I " value="X">
+                        <label class="form-check-label " for="orejaAusente-I ">I</label>
+                    </div> -->
+                    <select formControlName="Ausente" name="Ausente" id="orejaSelAusente" class="form-control">
+                        <option value="No" selected>Ninguna</option>
+                        <option value="Si-D">Si D</option>
+                        <option value="Si-I">Si I</option>
+                        <option value="Ambas">Ambas</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group ">
+                <h5>Conducto Auditivo Externo</h5>
+                <div class="col-3 inline-content">
+                    <label>Normal</label>
+                    <!-- <div class="form-check form-check-inline ">
+                        <input formControlName="caeNormalD" name="caeNormalD" class="form-check-input " type="checkbox" id="caeNormal-D " value="1">
+                        <label class="form-check-label " for="caeNormal-D ">D</label>
+                    </div>
+                    <div class="form-check form-check-inline ">
+                        <input formControlName="caeNormalI" name="caeNormalI" class="form-check-input " type="checkbox" id="caeNormal-I " value="1">
+                        <label class="form-check-label " for="caeNormal-I ">I</label>
+                    </div> -->
+                    <select formControlName="caeNormal" name="caeNormal" id="orejaSelcaeNormal" class="form-control">
+                        <option value="No" selected>Ninguna</option>
+                        <option value="Si-D">Si D</option>
+                        <option value="Si-I">Si I</option>
+                        <option value="Ambas">Ambas</option>
+                    </select>
+                </div>
+
+                <div class="col-3 inline-content">
+                    <label>Colapsado</label>
+                    <!-- <div class="form-check form-check-inline ">
+                        <input formControlName="ColapsadoD" name="ColapsadoD" class="form-check-input " type="checkbox" id="caeColapsado-D " value="option2 ">
+                        <label class="form-check-label " for="caeColapsado-D ">D</label>
+                    </div>
+                    <div class="form-check form-check-inline ">
+                        <input formControlName="ColapsadoI" name="ColapsadoI" class="form-check-input " type="checkbox" id="caeColapsado-I " value="option2 ">
+                        <label class="form-check-label " for="caeColapsado-I ">I</label>
+                    </div> -->
+                    <select formControlName="Colapsado" name="Colapsado" id="orejaSelColapsado" class="form-control">
+                        <option value="No" selected>Ninguna</option>
+                        <option value="Si-D">Si D</option>
+                        <option value="Si-I">Si I</option>
+                        <option value="Ambas">Ambas</option>
+                    </select>
+                </div>
+
+                <div class="col-2 inline-content">
+                    <label>Alteracion Congenita</label>
+                    <!-- <div class="form-check form-check-inline ">
+                        <input formControlName="CongenitaD" name="CongenitaD" class="form-check-input " type="checkbox" id="caeca-D " value="option2 ">
+                        <label class="form-check-label " for="caeca-D ">D</label>
+                    </div>
+                    <div class="form-check form-check-inline ">
+                        <input formControlName="CongenitaI" name="CongenitaI" class="form-check-input " type="checkbox" id="caeca-I " value="option2 ">
+                        <label class="form-check-label " for="caeca-I ">I</label>
+                    </div> -->
+                    <select formControlName="Congenita" name="Congenita" id="orejaSelCongenita" class="form-control">
+                        <option value="No" selected>Ninguna</option>
+                        <option value="Si-D">Si D</option>
+                        <option value="Si-I">Si I</option>
+                        <option value="Ambas">Ambas</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group ">
+                <h5>Cerumen</h5>
+                <div class="col-3 inline-content">
+                    <label><strong>D.</strong></label>
+                    <!-- <div class="form-check form-check-inline ">
+                        <input formControlName="CerumenDN" name="CerumenDN" class="form-check-input " type="checkbox" id="cerumenNo-D " value="option2 ">
+                        <label class="form-check-label " for="cerumenD-D ">No</label>
+                    </div>
+                    <div class="form-check form-check-inline ">
+                        <input formControlName="CerumenDS" name="CerumenDS" class="form-check-input " type="checkbox" id="cerumenSi-D " value="option2 ">
+                        <label class="form-check-label " for="cerumenSi-D ">Si</label>
+                    </div> -->
+                    <select formControlName="Cerumen" name="Cerumen" id="orejaSelCerumen" class="form-control">
+                        <option value="No" selected>Ninguna</option>
+                        <option value="Si-D">Si D</option>
+                        <option value="Si-I">Si I</option>
+                        <option value="Ambas">Ambas</option>
+                    </select>
+                </div>
+                <label>Parcial</label>
+                <div class="form-check form-check-inline ">
+                    <div class="input-group mb-3 ">
+                        <input formControlName="CerumenP" name="CerumenP" type="text" class="form-control cerumenParcialD-input " placeholder="Percentage ">
+                        <div class="input-group-append ">
+                            <span class="input-group-text " id="basic-addon2 ">%</span>
+                        </div>
+                    </div>
+                </div>
+                <label>Total</label>
+                <div class="form-check form-check-inline ">
+                    <div class="input-group mb-3 ">
+                        <input formControlName="CerumenT" name="CerumenT" type="text" class="form-control cerumenTotalD-input " placeholder="Total ">
+                    </div>
+                </div>
+                <div class="col-3 inline-content">
+                    <label><strong>I.</strong></label>
+                    <!-- <div class="form-check form-check-inline ">
+                        <input formControlName="CerumenIN" name="CerumenIN" class="form-check-input " type="checkbox" id="cerumenNo-I" value="option2 ">
+                        <label class="form-check-label " for="cerumenNo-I ">No</label>
+                    </div>
+                    <div class="form-check form-check-inline ">
+                        <input formControlName="CerumenIS" name="CerumenIS" class="form-check-input " type="checkbox" id="cerumenSi-I" value="option2 ">
+                        <label class="form-check-label " for="cerumenSi-I ">Si</label>
+                    </div> -->
+                    <select formControlName="CerumenI" name="CerumenI" id="orejaSelCerumenI" class="form-control">
+                        <option value="No" selected>Ninguna</option>
+                        <option value="Si-D">Si D</option>
+                        <option value="Si-I">Si I</option>
+                        <option value="Ambas">Ambas</option>
+                    </select>
+                </div>
+                <label>Parcial</label>
+                <div class="form-check form-check-inline porcentage-div ">
+                    <div class="input-group mb-3 ">
+                        <input formControlName="CerumenIP" name="CerumenIP" type="text " class="form-control cerumenParcialI-input" placeholder="Percentage ">
+                        <div class="input-group-append ">
+                            <span class="input-group-text " id="basic-addon2 ">%</span>
+                        </div>
+                    </div>
+                </div>
+                <label>Total</label>
+                <div class="form-check form-check-inline porcentage-div ">
+                    <div class="input-group mb-3 ">
+                        <input formControlName="CerumenIT" name="CerumenIT" type="text " class="form-control cerumenTotalI-input" placeholder="Total ">
+                    </div>
+                </div>
+                <label>Extraccion</label>
+                <div class="col-3 inline-content">
+                    <!-- <div class="form-check form-check-inline ">
+                        <input formControlName="ExtraccionN" name="ExtraccionN" class="form-check-input " type="checkbox" id="cerumentExtraccionNo" value="option2 ">
+                        <label class="form-check-label " for="cerumentExtraccionNo ">No</label>
+                    </div>
+                    <div class="form-check form-check-inline ">
+                        <input formControlName="ExtraccionS" name="ExtraccionS" class="form-check-input " type="checkbox" id="cerumentExtraccionSi" value="option2 ">
+                        <label class="form-check-label " for="cerumentExtraccionSi ">Si</label>
+                    </div> -->
+                    <select formControlName="Extraccion" name="Extraccion" id="orejaSelcerumentExtraccion" class="form-control">
+                        <option value="No" selected>No</option>
+                        <option value="Si">Si</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group ">
+                <h5>Membrana Timpanica</h5>
+                <div class="col-3 inline-content">
+                    <label>Nacarada Normal</label>
+                    <!-- <div class="form-check form-check-inline ">
+                        <input formControlName="MembrNacaNorD" name="MembrNacaNorD" class="form-check-input " type="checkbox" id="mtNNormal-D " value="option2 ">
+                        <label class="form-check-label " for="mtNNormal-D ">D</label>
+                    </div>
+                    <div class="form-check form-check-inline ">
+                        <input formControlName="MembrNacaNorI" name="MembrNacaNorI" class="form-check-input " type="checkbox" id="mtNNormal-I " value="option2 ">
+                        <label class="form-check-label " for="mtNNormal-I ">I</label>
+                    </div> -->
+                    <select formControlName="MembrNacaNor" name="MembrNacaNor" id="orejaSelMembrNacaNor" class="form-control">
+                        <option value="No" selected>Ninguna</option>
+                        <option value="Si-D">Si D</option>
+                        <option value="Si-I">Si I</option>
+                        <option value="Ambas">Ambas</option>
+                    </select>
+                </div>
+
+                <div class="col-3 inline-content">
+                    <label>Roja</label>
+                    <!-- <div class="form-check form-check-inline ">
+                        <input formControlName="MembrNacaRojD" name="MembrNacaRojD" class="form-check-input " type="checkbox" id="mtRoja-D " value="option2 ">
+                        <label class="form-check-label " for="mtRoja-D ">D</label>
+                    </div>
+                    <div class="form-check form-check-inline ">
+                        <input formControlName="MembrNacaRojI" name="MembrNacaRojI" class="form-check-input " type="checkbox" id="mtRoja-I " value="option2 ">
+                        <label class="form-check-label " for="mtRoja-I ">I</label>
+                    </div> -->
+                    <select formControlName="MembrNacaRoj" name="MembrNacaRoj" id="orejaSelMembrRoj" class="form-control">
+                        <option value="No" selected>Ninguna</option>
+                        <option value="Si-D">Si D</option>
+                        <option value="Si-I">Si I</option>
+                        <option value="Ambas">Ambas</option>
+                    </select>
+                </div>
+                <div class="col-3 inline-content">
+                    <label>Opaca</label>
+                    <!-- <div class="form-check form-check-inline ">
+                        <input formControlName="MembrNacaOpcD" name="MembrNacaOpcD" class="form-check-input " type="checkbox" id="mtOpaca-D " value="option2 ">
+                        <label class="form-check-label " for="mtOpaca-D ">D</label>
+                    </div>
+                    <div class="form-check form-check-inline ">
+                        <input formControlName="MembrNacaOpcI" name="MembrNacaOpcI" class="form-check-input " type="checkbox" id="mtOpaca-I " value="option2 ">
+                        <label class="form-check-label " for="mtOpaca-I ">I</label>
+                    </div> -->
+                    <select formControlName="MembrNacaOpc" name="MembrNacaOpc" id="orejaSelMembrOpc" class="form-control">
+                        <option value="No" selected>Ninguna</option>
+                        <option value="Si-D">Si D</option>
+                        <option value="Si-I">Si I</option>
+                        <option value="Ambas">Ambas</option>
+                    </select>
+                </div>
+                <label>Perforada</label>
+                <div class="form-check form-check-inline porcentage-div ">
+                    <label>D</label>
+                    <div class="input-group mb-3">
+                        <input formControlName="MembrNacaPerD" name="MembrNacaPerD" type="text " class="form-control mtPerforadaD-input" placeholder="Percentage">
+                        <div class="input-group-append ">
+                            <span class="input-group-text " id="basic-addon2 ">%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-check form-check-inline porcentage-div ">
+                    <label>I</label>
+                    <div class="input-group mb-3 ">
+                        <input formControlName="MembrNacaPerI" name="MembrNacaPerI" type="text " class="form-control mtPerforadaI-input " placeholder="Percentage ">
+                        <div class="input-group-append ">
+                            <span class="input-group-text " id="basic-addon2 ">%</span>
+                        </div>
+                    </div>
+                </div>
+                <label>Retraida</label>
+                <div class="form-check form-check-inline porcentage-div ">
+                    <label>D</label>
+                    <div class="input-group mb-3 ">
+                        <input formControlName="MembrNacaRetD" name="MembrNacaRetD" type="text " class="form-control mtRetraidaD-input " placeholder="Percentage ">
+                        <div class="input-group-append ">
+                            <span class="input-group-text " id="basic-addon2 ">%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-check form-check-inline porcentage-div ">
+                    <label>I</label>
+                    <div class="input-group mb-3 ">
+                        <input formControlName="MembrNacaRetI" name="MembrNacaRetI" type="text " class="form-control mtRetraidaI-input " placeholder="Percentage ">
+                        <div class="input-group-append ">
+                            <span class="input-group-text " id="basic-addon2 ">%</span>
+                        </div>
+                    </div>
+                </div>
+                <label>Monomerica</label>
+                <div class="form-check form-check-inline porcentage-div ">
+                    <label>D</label>
+                    <div class="input-group mb-3 ">
+                        <input formControlName="MembrNacaMonoD" name="MembrNacaMonoD" type="text " class="form-control mtMonomericaD-input " placeholder="Percentage ">
+                        <div class="input-group-append ">
+                            <span class="input-group-text " id="basic-addon2 ">%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-check form-check-inline porcentage-div ">
+                    <label>I</label>
+                    <div class="input-group mb-3 ">
+                        <input formControlName="MembrNacaMonoI" name="MembrNacaMonoI" type="text " class="form-control mtMonomericaI-input " placeholder="Percentage ">
+                        <div class="input-group-append ">
+                            <span class="input-group-text " id="basic-addon2 ">%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group ">
+                <h5>Otorragia</h5>
+                <div class="input-group col-5 ">
+                    <div class="input-group-prepend ">
+                        <label class="input-group-text " for="mtOtorragia ">Opciones</label>
+                    </div>
+                    <select formControlName="Otorragia" name="Otorragia" class="custom-select " id="mtOtorragia ">
+                          <option selected value="Ninguno ">Ninguno</option>
+                          <option value="Izquierdo ">Izquierdo</option>
+                          <option value="Derecho ">Derecho</option>
+                          <option value="Ambos ">Ambos</option>
+                        </select>
+                </div>
+            </div>
+            <div class="form-group ">
+                <h5>Otorrea</h5>
+                <div class="input-group col-5 ">
+                    <div class="input-group-prepend ">
+                        <label class="input-group-text " for="mtOtorrea ">Opciones</label>
+                    </div>
+                    <select formControlName="Otorrea" name="Otorrea" class="custom-select" id="mtOtorrea ">
+                          <option selected value="Ninguno ">Ninguno</option>
+                          <option value="Izquierdo ">Izquierdo</option>
+                          <option value="Derecho ">Derecho</option>
+                          <option value="Ambos ">Ambos</option>
+                        </select>
+                </div>
+            </div>
+            <div class="form-group ">
+                <h5>Otitis 1/2 serosa</h5>
+                <div class="input-group col-5 ">
+                    <div class="input-group-prepend ">
+                        <label class="input-group-text " for="mtOtitis ">Opciones</label>
+                    </div>
+                    <select formControlName="Otitis" name="Otitis" class="custom-select " id="mtOtitis ">
+                          <option selected value="Ninguno ">Ninguno</option>
+                          <option value="Izquierdo ">Izquierdo</option>
+                          <option value="Derecho ">Derecho</option>
+                          <option value="Ambos ">Ambos</option>
+                        </select>
+                </div>
+            </div>
+            <div class="form-group ">
+                <label for="exampleFormControlTextarea1 "><h5>Otros hallazgos</h5></label>
+                <textarea formControlName="hallazgos" name="hallazgos" class="form-control otitistxtArea " id="exampleFormControlTextarea1 " rows="2 "></textarea>
+            </div>
+            <br>
+            <h4 class="text-center ">Audiograma</h4>
+            <div class="form-group ">
+                <h5>Normal D</h5>
+                <label>Con perfil plano</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="NDconperfilplano" name="NDconperfilplano" class="custom-select" class="form-check-input " type="checkbox" id="perfilPlano-D " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="NDconperfilplano" name="NDconperfilplano" class="form-check-input" type="radio" name="NDconperfilplano" id="perfilPlano-D-si" value="Si">
+                    <label class="form-check-label" for="perfilPlano-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="NDconperfilplano" name="NDconperfilplano" class="form-check-input" type="radio" name="NDconperfilplano" id="perfilPlano-D-no" value="No">
+                    <label class="form-check-label" for="perfilPlano-D-no">No</label>
+                </div>
+                <label>Descendente</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="NDdescendente" name="NDdescendente" class="custom-select" class="form-check-input " type="checkbox" id="descendente-D " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="NDdescendente" name="NDdescendente" class="form-check-input" type="radio" name="NDdescendente" id="descendente-D-si" value="Si">
+                    <label class="form-check-label" for="descendente-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="NDdescendente" name="NDdescendente" class="form-check-input" type="radio" name="NDdescendente" id="descendente-D-no" value="No">
+                    <label class="form-check-label" for="descendente-D-no">No</label>
+                </div>
+                <label>Ascendente</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="NDascendente" name="NDascendente" class="form-check-input " type="checkbox" id="ascendente-D" value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="NDascendente" name="NDascendente" class="form-check-input" type="radio" name="NDascendente" id="ascendente-D-si" value="Si">
+                    <label class="form-check-label" for="ascendente-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="NDascendente" name="NDascendente" class="form-check-input" type="radio" name="NDascendente" id="ascendente-D-no" value="No">
+                    <label class="form-check-label" for="ascendente-D-no">No</label>
+                </div>
+                <label>Batea</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="NDbatea" name="NDbatea" class="form-check-input " type="checkbox" id="batea-D " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="NDbatea" name="NDbatea" class="form-check-input" type="radio" name="NDbatea" id="batea-D-si" value="Si">
+                    <label class="form-check-label" for="batea-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="NDbatea" name="NDbatea" class="form-check-input" type="radio" name="NDbatea" id="batea-D-no" value="No">
+                    <label class="form-check-label" for="batea-D-no">No</label>
+                </div>
+                <label>Campana</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="NDcampana" name="NDcampana" class="form-check-input " type="checkbox" id="campana-D " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="NDcampana" name="NDcampana" class="form-check-input" type="radio" name="NDcampana" id="campana-D-si" value="Si">
+                    <label class="form-check-label" for="campana-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="NDcampana" name="NDcampana" class="form-check-input" type="radio" name="NDcampana" id="campana-D-no" value="No">
+                    <label class="form-check-label" for="campana-D-no">No</label>
+                </div>
+                <label>Mixto</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="NDmixto" name="NDmixto" class="form-check-input " type="checkbox" id="mixto-D " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="NDmixto" name="NDmixto" class="form-check-input" type="radio" name="NDmixto" id="mixto-D-si" value="Si">
+                    <label class="form-check-label" for="mixto-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="NDmixto" name="NDmixto" class="form-check-input" type="radio" name="NDmixto" id="mixto-D-no" value="No">
+                    <label class="form-check-label" for="mixto-D-no">No</label>
+                </div>
+            </div>
+            <div class="form-group ">
+                <h5>Normal I</h5>
+                <label>Con perfil plano</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="NIconperfilplano" name="NIconperfilplano" class="form-check-input" type="checkbox" id="perfilPlano-I" value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="NIconperfilplano" name="NIconperfilplano" class="form-check-input" type="radio" name="NIconperfilplano" id="perfilPlano-I-si" value="Si">
+                    <label class="form-check-label" for="perfilPlano-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="NIconperfilplano" name="NIconperfilplano" class="form-check-input" type="radio" name="NIconperfilplano" id="perfilPlano-I-no" value="No">
+                    <label class="form-check-label" for="perfilPlano-I-no">No</label>
+                </div>
+                <label>Descendente</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="NIdescendente" name="NIdescendente" class="form-check-input " type="checkbox" id="descendente-I" value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="NIdescendente" name="NIdescendente" class="form-check-input" type="radio" name="NIdescendente" id="descendente-I-si" value="Si">
+                    <label class="form-check-label" for="descendente-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="NIdescendente" name="NIdescendente" class="form-check-input" type="radio" name="NIdescendente" id="descendente-I-no" value="No">
+                    <label class="form-check-label" for="descendente-I-no">No</label>
+                </div>
+                <label>Ascendente</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="NIascendente" name="NIascendente" class="form-check-input " type="checkbox" id="ascendente-I" value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="NIascendente" name="NIascendente" class="form-check-input" type="radio" name="NIascendente" id="ascendente-I-si" value="Si">
+                    <label class="form-check-label" for="ascendente-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="NIascendente" name="NIascendente" class="form-check-input" type="radio" name="NIascendente" id="ascendente-I-no" value="No">
+                    <label class="form-check-label" for="ascendente-I-no">No</label>
+                </div>
+                <label>Batea</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="NIbatea" name="NIbatea" class="form-check-input " type="checkbox" id="batea-I" value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="NIbatea" name="NIbatea" class="form-check-input" type="radio" name="NIbatea" id="batea-I-si" value="Si">
+                    <label class="form-check-label" for="batea-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="NIbatea" name="NIbatea" class="form-check-input" type="radio" name="NIbatea" id="batea-I-no" value="No">
+                    <label class="form-check-label" for="batea-I-no">No</label>
+                </div>
+                <label>Campana</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="NIcampana" name="NIcampana" class="form-check-input " type="checkbox" id="campana-I " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="NIcampana" name="NIcampana" class="form-check-input" type="radio" name="NIcampana" id="campana-I-si" value="Si">
+                    <label class="form-check-label" for="campana-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="NIcampana" name="NIcampana" class="form-check-input" type="radio" name="NIcampana" id="campana-I-no" value="No">
+                    <label class="form-check-label" for="campana-I-no">No</label>
+                </div>
+                <label>Mixto</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="NImixto" name="NImixto" class="form-check-input " type="checkbox" id="mixto-I " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="NImixto" name="NImixto" class="form-check-input" type="radio" name="NImixto" id="mixto-I-si" value="Si">
+                    <label class="form-check-label" for="mixto-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="NImixto" name="NImixto" class="form-check-input" type="radio" name="NImixto" id="mixto-I-no" value="No">
+                    <label class="form-check-label" for="mixto-I-no">No</label>
+                </div>
+            </div>
+            <div class="form-group ">
+                <h5>Perdida D</h5>
+                <label>Superficial</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PDsuperficial" name="PDsuperficial" class="form-check-input" type="checkbox" id="superficial-D " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDsuperficial" name="PDsuperficial" class="form-check-input" type="radio" name="PDsuperficial" id="superficial-D-si" value="Si">
+                    <label class="form-check-label" for="superficial-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDsuperficial" name="PDsuperficial" class="form-check-input" type="radio" name="PDsuperficial" id="superficial-D-no" value="No">
+                    <label class="form-check-label" for="superficial-D-no">No</label>
+                </div>
+                <label>Moderada</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PDmoderada" name="PDmoderada" class="form-check-input " type="checkbox" id="moderada-D " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDmoderada" name="PDmoderada" class="form-check-input" type="radio" name="PDmoderada" id="moderada-D-si" value="Si">
+                    <label class="form-check-label" for="moderada-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDmoderada" name="PDmoderada" class="form-check-input" type="radio" name="PDmoderada" id="moderada-D-no" value="No">
+                    <label class="form-check-label" for="moderada-D-no">No</label>
+                </div>
+                <label>Moderada severa</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PDmoderadas" name="PDmoderadas" class="form-check-input " type="checkbox" id="moderadaSevera-D " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDmoderadas" name="PDmoderadas" class="form-check-input" type="radio" name="PDmoderadas" id="moderadaSevera-D-si" value="Si">
+                    <label class="form-check-label" for="moderadaSevera-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDmoderadas" name="PDmoderadas" class="form-check-input" type="radio" name="PDmoderadas" id="moderadaSevera-D-no" value="No">
+                    <label class="form-check-label" for="moderadaSevera-D-no">No</label>
+                </div>
+                <label>Severa</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PDsevera" name="PDsevera" class="form-check-input " type="checkbox" id="Severa-D " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDsevera" name="PDsevera" class="form-check-input" type="radio" name="PDsevera" id="Severa-D-si" value="Si">
+                    <label class="form-check-label" for="Severa-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDsevera" name="PDsevera" class="form-check-input" type="radio" name="PDsevera" id="Severa-D-no" value="No">
+                    <label class="form-check-label" for="Severa-D-no">No</label>
+                </div>
+                <label>Profunda</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PDprofunda" name="PDprofunda" class="form-check-input " type="checkbox" id="PDprofunda-D " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDprofunda" name="PDprofunda" class="form-check-input" type="radio" name="PDprofunda" id="PDprofunda-D-si" value="Si">
+                    <label class="form-check-label" for="PDprofunda-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDprofunda" name="PDprofunda" class="form-check-input" type="radio" name="PDprofunda" id="PDprofunda-D-no" value="No">
+                    <label class="form-check-label" for="PDprofunda-D-no">No</label>
+                </div>
+                <label><strong>Perfil plano</strong></label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PDperfilp" name="PDperfilp" class="form-check-input " type="checkbox" id="PDperfilp-D " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDperfilp" name="PDperfilp" class="form-check-input" type="radio" name="PDperfilp" id="PDperfilp-D-si" value="Si">
+                    <label class="form-check-label" for="PDperfilp-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDperfilp" name="PDperfilp" class="form-check-input" type="radio" name="PDperfilp" id="PDperfilp-D-no" value="No">
+                    <label class="form-check-label" for="PDperfilp-D-no">No</label>
+                </div>
+                <label>Descendente</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PDdescendente" name="PDdescendente" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDdescendente" name="PDdescendente" class="form-check-input" type="radio" name="PDdescendente" id="PDdescendente-D-si" value="Si">
+                    <label class="form-check-label" for="PDdescendente-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDdescendente" name="PDdescendente" class="form-check-input" type="radio" name="PDdescendente" id="PDdescendente-D-no" value="No">
+                    <label class="form-check-label" for="PDdescendente-D-no">No</label>
+                </div>
+                <label>Ascendente</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PDascendente" name="PDascendente" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDascendente" name="PDascendente" class="form-check-input" type="radio" name="PDascendente" id="PDascendente-D-si" value="Si">
+                    <label class="form-check-label" for="PDascendente-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDascendente" name="PDascendente" class="form-check-input" type="radio" name="PDascendente" id="PDascendente-D-no" value="No">
+                    <label class="form-check-label" for="PDascendente-D-no">No</label>
+                </div>
+                <label>Batea</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PDbatea" name="PDbatea" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDbatea" name="PDbatea" class="form-check-input" type="radio" name="PDbatea" id="PDbatea-D-si" value="Si">
+                    <label class="form-check-label" for="PDbatea-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDbatea" name="PDbatea" class="form-check-input" type="radio" name="PDbatea" id="PDbatea-D-no" value="No">
+                    <label class="form-check-label" for="PDbatea-D-no">No</label>
+                </div>
+                <label>Campana</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PDcampana" name="PDcampana" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDcampana" name="PDcampana" class="form-check-input" type="radio" name="PDcampana" id="PDcampana-D-si" value="Si">
+                    <label class="form-check-label" for="PDcampana-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDcampana" name="PDcampana" class="form-check-input" type="radio" name="PDcampana" id="PDcampana-D-no" value="No">
+                    <label class="form-check-label" for="PDcampana-D-no">No</label>
+                </div>
+                <label>Mixto</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PDmixto" name="PDmixto" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDmixto" name="PDmixto" class="form-check-input" type="radio" name="PDmixto" id="PDmixto-D-si" value="Si">
+                    <label class="form-check-label" for="PDmixto-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDmixto" name="PDmixto" class="form-check-input" type="radio" name="PDmixto" id="PDmixto-D-no" value="No">
+                    <label class="form-check-label" for="PDmixto-D-no">No</label>
+                </div>
+                <label><strong>Caracter:</strong> Conductivo</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PDcaracterC" name="PDcaracterC" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDcaracterC" name="PDcaracterC" class="form-check-input" type="radio" name="PDcaracterC" id="PDcaracterC-D-si" value="Si">
+                    <label class="form-check-label" for="PDcaracterC-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDcaracterC" name="PDcaracterC" class="form-check-input" type="radio" name="PDcaracterC" id="PDcaracterC-D-no" value="No">
+                    <label class="form-check-label" for="PDcaracterC-D-no">No</label>
+                </div>
+                <label>Sensorial</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PDsensorial" name="PDsensorial" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDsensorial" name="PDsensorial" class="form-check-input" type="radio" name="PDsensorial" id="PDsensorial-D-si" value="Si">
+                    <label class="form-check-label" for="PDsensorial-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDsensorial" name="PDsensorial" class="form-check-input" type="radio" name="PDsensorial" id="PDsensorial-D-no" value="No">
+                    <label class="form-check-label" for="PDsensorial-D-no">No</label>
+                </div>
+                <label>Mixto</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PDmixto2" name="PDmixto2" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDmixto2" name="PDmixto2" class="form-check-input" type="radio" name="PDmixto2" id="PDmixto2-D-si" value="Si">
+                    <label class="form-check-label" for="PDmixto2-D-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PDmixto2" name="PDmixto2" class="form-check-input" type="radio" name="PDmixto2" id="PDmixto2-D-no" value="No">
+                    <label class="form-check-label" for="PDmixto2-D-no">No</label>
+                </div>
+            </div>
+            <div class="form-group ">
+                <h5>Perdida I</h5>
+                <label>Superficial</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PIsuperficial" name="PIsuperficial" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIsuperficial" name="PIsuperficial" class="form-check-input" type="radio" name="PIsuperficial" id="PIsuperficial-I-si" value="Si">
+                    <label class="form-check-label" for="PIsuperficial-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIsuperficial" name="PIsuperficial" class="form-check-input" type="radio" name="PIsuperficial" id="PIsuperficial-I-no" value="No">
+                    <label class="form-check-label" for="PIsuperficial-I-no">No</label>
+                </div>
+                <label>Moderada</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PImoderada" name="PImoderada" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PImoderada" name="PImoderada" class="form-check-input" type="radio" name="PImoderada" id="PImoderada-I-si" value="Si">
+                    <label class="form-check-label" for="PImoderada-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PImoderada" name="PImoderada" class="form-check-input" type="radio" name="PImoderada" id="PImoderada-I-no" value="No">
+                    <label class="form-check-label" for="PImoderada-I-no">No</label>
+                </div>
+                <label>Moderada severa</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PImoderadas" name="PImoderadas" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PImoderadas" name="PImoderadas" class="form-check-input" type="radio" name="PImoderadas" id="PImoderadas-I-si" value="Si">
+                    <label class="form-check-label" for="PImoderadas-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PImoderadas" name="PImoderadas" class="form-check-input" type="radio" name="PImoderadas" id="PImoderadas-I-no" value="No">
+                    <label class="form-check-label" for="PImoderadas-I-no">No</label>
+                </div>
+                <label>Severa</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PIsevera" name="PIsevera" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIsevera" name="PIsevera" class="form-check-input" type="radio" name="PIsevera" id="PIsevera-I-si" value="Si">
+                    <label class="form-check-label" for="PIsevera-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIsevera" name="PIsevera" class="form-check-input" type="radio" name="PIsevera" id="PIsevera-I-no" value="No">
+                    <label class="form-check-label" for="PIsevera-I-no">No</label>
+                </div>
+                <label>Profunda</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PIprofunda" name="PIprofunda" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIprofunda" name="PIprofunda" class="form-check-input" type="radio" name="PIprofunda" id="PIprofunda-I-si" value="Si">
+                    <label class="form-check-label" for="PIprofunda-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIprofunda" name="PIprofunda" class="form-check-input" type="radio" name="PIprofunda" id="PIprofunda-I-no" value="No">
+                    <label class="form-check-label" for="PIprofunda-I-no">No</label>
+                </div>
+                <label><strong>Perfil plano</strong></label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PIperfilp" name="PIperfilp" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIperfilp" name="PIperfilp" class="form-check-input" type="radio" name="PIperfilp" id="PIperfilp-I-si" value="Si">
+                    <label class="form-check-label" for="PIperfilp-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIperfilp" name="PIperfilp" class="form-check-input" type="radio" name="PIperfilp" id="PIperfilp-I-no" value="No">
+                    <label class="form-check-label" for="PIperfilp-I-no">No</label>
+                </div>
+                <label>Descendente</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PIdescendente" name="PIdescendente" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIdescendente" name="PIdescendente" class="form-check-input" type="radio" name="PIdescendente" id="PIdescendente-I-si" value="Si">
+                    <label class="form-check-label" for="PIdescendente-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIdescendente" name="PIdescendente" class="form-check-input" type="radio" name="PIdescendente" id="PIdescendente-I-no" value="No">
+                    <label class="form-check-label" for="PIdescendente-I-no">No</label>
+                </div>
+                <label>Ascendente</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PIascendente" name="PIascendente" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIascendente" name="PIascendente" class="form-check-input" type="radio" name="PIascendente" id="PIascendente-I-si" value="Si">
+                    <label class="form-check-label" for="PIascendente-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIascendente" name="PIascendente" class="form-check-input" type="radio" name="PIascendente" id="PIascendente-I-no" value="No">
+                    <label class="form-check-label" for="PIascendente-I-no">No</label>
+                </div>
+                <label>Batea</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PIbatea" name="PIbatea" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIbatea" name="PIbatea" class="form-check-input" type="radio" name="PIbatea" id="PIbatea-I-si" value="Si">
+                    <label class="form-check-label" for="PIbatea-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIbatea" name="PIbatea" class="form-check-input" type="radio" name="PIbatea" id="PIbatea-I-no" value="No">
+                    <label class="form-check-label" for="PIbatea-I-no">No</label>
+                </div>
+                <label>Campana</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PIcampana" name="PIcampana" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIcampana" name="PIcampana" class="form-check-input" type="radio" name="PIcampana" id="PIcampana-I-si" value="Si">
+                    <label class="form-check-label" for="PIcampana-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIcampana" name="PIcampana" class="form-check-input" type="radio" name="PIcampana" id="PIcampana-I-no" value="No">
+                    <label class="form-check-label" for="PIcampana-I-no">No</label>
+                </div>
+                <label>Mixto</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PImixto" name="PImixto" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PImixto" name="PImixto" class="form-check-input" type="radio" name="PImixto" id="PImixto-I-si" value="Si">
+                    <label class="form-check-label" for="PImixto-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PImixto" name="PImixto" class="form-check-input" type="radio" name="PImixto" id="PImixto-I-no" value="No">
+                    <label class="form-check-label" for="PImixto-I-no">No</label>
+                </div>
+                <label><strong>Caracter:</strong> Conductivo</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PIcaracterC" name="PIcaracterC" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIcaracterC" name="PIcaracterC" class="form-check-input" type="radio" name="PIcaracterC" id="PIcaracterC-I-si" value="Si">
+                    <label class="form-check-label" for="PIcaracterC-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIcaracterC" name="PIcaracterC" class="form-check-input" type="radio" name="PIcaracterC" id="PIcaracterC-I-no" value="No">
+                    <label class="form-check-label" for="PIcaracterC-I-no">No</label>
+                </div>
+                <label>Sensorial</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PIsensorial" name="PIsensorial" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIsensorial" name="PIsensorial" class="form-check-input" type="radio" name="PIsensorial" id="PIsensorial-I-si" value="Si">
+                    <label class="form-check-label" for="PIsensorial-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PIsensorial" name="PIsensorial" class="form-check-input" type="radio" name="PIsensorial" id="PIsensorial-I-no" value="No">
+                    <label class="form-check-label" for="PIsensorial-I-no">No</label>
+                </div>
+                <label>Mixto</label>
+                <!-- <div class="form-check form-check-inline ">
+                    <input formControlName="PImixto2" name="PImixto2" class="form-check-input " type="checkbox" id="inlineCheckbox2 " value="option2 ">
+                </div> -->
+                <div class="form-check form-check-inline">
+                    <input formControlName="PImixto2" name="PImixto2" class="form-check-input" type="radio" name="PImixto2" id="PImixto2-I-si" value="Si">
+                    <label class="form-check-label" for="PImixto2-I-si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input formControlName="PImixto2" name="PImixto2" class="form-check-input" type="radio" name="PImixto2" id="PImixto2-I-no" value="No">
+                    <label class="form-check-label" for="PImixto2-I-no">No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <h5>Muescas OD</h5>
+                <label for="DMuescas-D">Escriba las frecuencas</label>
+                <input formControlName="MuescaOD" name="MuescaOD" type="text" class="form-control" id="DMuescas-D" placeholder="Frecuencias">
+                <small>Separe las frecuencias con ,</small>
+            </div>
+            <div class="form-group">
+                <h5>Muescas OI</h5>
+                <label for="DMuescas-I">Escriba las frecuencas</label>
+                <input formControlName="MuescaOI" name="MuescaOI" type="text" class="form-control" id="DMuescas-I" placeholder="Frecuencias">
+                <small>Separe las frecuencias con ,</small>
+            </div>
+            <div class="form-group ">
+                <label for="FNhallazgos "><h5>Otros hallazgos</h5></label>
+                <textarea formControlName="FNhallazgos" name="FNhallazgos" class="form-control otitistxtArea " id="FNhallazgos " rows="2 "></textarea>
+            </div>
+            <div class="container">
+                <br>
+                <!-- <img *ngIf="!imagenTemp" [src]="paciente.img | imagen" class="w150"> -->
+                <img *ngIf="imagenTemp" [src]="imagenTemp" class="w150">
+                <input type="file" (change)="seleccionImage($event.target.files[0])">
+
+                <br>
+                <p></p>
+                <a style="font-size: 25px" href="http://audsim.com/audgen/AudGen.html" target="_blank">Examen de Audiologia</a>
+                <button (click)="cambiarImagen()" [disabled]="!imagenSubir" style="margin-left: 3rem" class="btn btn-primary">Subir examen</button>
+            </div>
+
+            <div class="container" style="margin-top: 5rem">
+                <button type="submit" class="btn btn-primary">Subir</button>
+                <!-- onclick=" this.disabled=true; this.value='Enviado' ; this.form.submit() " -->
+            </div>
+        </form>
+    </div>
+</div>

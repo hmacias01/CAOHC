@@ -1,0 +1,31 @@
+.form-container {
+    background-color: white;
+}
+
+.container-row {
+    padding: 1rem;
+    text-align: center;
+}
+
+.form-group {
+    border-bottom: 1px solid #dddddd;
+    line-height: 2;
+}
+
+.porcentage-div label {
+    margin-right: 5px;
+}
+
+label {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.form-check-label {
+    padding-left: .25rem;
+    vertical-align: baseline;
+}
+
+.inline-content {
+    display: inline-block;
+}

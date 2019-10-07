@@ -1,0 +1,1046 @@
+<div class="form-vw">
+    <div class="container pacientesLista">
+        <form action="">
+            <div class="form-group">
+                <label for="Cedula">Numero de Cedula</label>
+                <input #input type="text" class="form-control" id="Cedula" aria-describedby="emailHelp" placeholder="Ingrese numero de cedula">
+                <button (click)="cargarOtoscopia( input.value )" class="btn btn-primary" style="margin-top:1rem">Buscar</button>
+            </div>
+        </form>
+    </div>
+    <div class="container pacientesLista">
+        <div class="row justify-content-center container-row">
+            <h3 class="">Reporteria general de paciente</h3>
+        </div>
+        <table class="table table-bordered ">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Campo</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <h4>OTOSCOPIA</h4>
+
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Oreja Normal
+
+                    </td>
+                    <td>
+                        {{otos.Normal}}
+                    </td>
+
+                </tr>
+
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Oreja Alteracion Congenita
+                    </td>
+                    <td>
+                        {{otos.AlteracionCongenita}}
+                    </td>
+
+                </tr>
+
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Oreja Ausente
+                    </td>
+                    <td>
+                        {{otos.Ausente}}
+                    </td>
+
+                </tr>
+
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Conducto Auditivo Externo Normal
+
+                    </td>
+                    <td>
+                        {{otos.caeNormal}}
+                    </td>
+
+                </tr>
+
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Colapsado
+                    </td>
+                    <td>
+                        {{otos.Colapsado}}
+                    </td>
+
+                </tr>
+
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Alteracion Congenita
+
+                    </td>
+                    <td>
+                        {{otos.Congenita}}
+                    </td>
+
+                </tr>
+
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Cerumen D.
+
+                    </td>
+                    <td>
+                        {{otos.Cerumen}}
+                    </td>
+
+                </tr>
+
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Cerumen Parcial
+                    </td>
+                    <td>
+                        {{otos.CerumenP}}
+                    </td>
+
+                </tr>
+
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Cerumen Total
+
+                    </td>
+                    <td>
+                        {{otos.CerumenT}}
+                    </td>
+                </tr>
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Cerumen I.
+                    </td>
+
+                    <td>
+                        {{otos.CerumenI}}
+                    </td>
+
+                </tr>
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Cerumen I. Parcial
+                    </td>
+                    <td>
+                        {{otos.CerumenIP}}
+                    </td>
+                </tr>
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Cerumen I. Total
+                    </td>
+                    <td>
+                        {{otos.CerumenIT}}
+                    </td>
+                </tr>
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Extraccion
+                    </td>
+                    <td>
+                        {{otos.Extraccion}}
+                    </td>
+                </tr>
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Membrana Timpanica
+                    </td>
+                    <td>
+                        {{otos.MembrNacaNor}}
+                    </td>
+                </tr>
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Membrana Timpanica Roja
+                    </td>
+                    <td>
+                        {{otos.MembrNacaRoj}}
+                    </td>
+                </tr>
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Membrana Timpanica Opaca
+                    </td>
+                    <td>
+                        {{otos.MembrNacaOpc}}
+                    </td>
+                </tr>
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Membrana Timpanica Perforada D.
+                    </td>
+                    <td>
+                        {{otos.MembrNacaPerD}}
+                    </td>
+                </tr>
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Membrana Timpanica Perforada I.
+                    </td>
+                    <td>
+                        {{otos.MembrNacaPerI}}
+                    </td>
+                </tr>
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Membrana Timpanica Retriada D.</td>
+                    <td>
+                        {{otos.MembrNacaRetD}}
+                    </td>
+                </tr>
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Membrana Timpanica Retriada I.
+                    </td>
+                    <td>
+                        {{otos.MembrNacaRetI}}
+                    </td>
+                </tr>
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Membrana Timpanica Monomerica D.
+                    </td>
+                    <td>
+                        {{otos.MembrNacaMonoD}}
+                    </td>
+                </tr>
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Membrana Timpanica Monomerica D.
+                    </td>
+                    <td>
+                        {{otos.MembrNacaMonoI}}
+                    </td>
+                </tr>
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Otorragia
+                    </td>
+                    <td>
+                        {{otos.Otorragia}}
+                    </td>
+                </tr>
+
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Otorrea
+                    </td>
+                    <td>
+                        {{otos.Otorrea}}
+                    </td>
+                </tr>
+                <tr *ngFor="let otos of otoscopa">
+                    <td>
+                        Otitis 1/2 serosa
+                    </td>
+                    <td>
+                        {{otos.Otitis}}
+                    </td>
+                </tr>
+
+                <br>
+                <h4>AUDIOGRAMA</h4>
+                <tr *ngFor="let otos of audiogramas">
+                    <td>
+                        Normal Derecho Con Perfil Plano
+                    </td>
+                    <td>
+                        {{otos.NDconperfilplano}}
+                    </td>
+
+                </tr>
+                <tr *ngFor="let otos of audiogramas">
+                    <td>
+                        Normal Derecho Descendente
+                    </td>
+                    <td>
+                        {{otos.NDdescendente}}
+                    </td>
+
+                </tr>
+
+
+                <tr *ngFor="let otos of audiogramas">
+                    <td>
+                        Normal Derecho Ascendente
+                    </td>
+                    <td>
+                        {{otos.NDascendente}}
+                    </td>
+
+                </tr>
+
+                <tr *ngFor="let otos of audiogramas">
+                    <td>
+                        Normal Derecho Batea
+                    </td>
+                    <td>
+                        {{otos.NDbatea}}
+                    </td>
+
+                </tr>
+
+                <tr *ngFor="let otos of audiogramas">
+                    <td>
+                        Normal Derecho Campana
+                    </td>
+                    <td>
+                        {{otos.NDcampana}}
+                    </td>
+
+                </tr>
+
+                <tr *ngFor="let otos of audiogramas">
+                    <td>
+                        Normal Derecho Mixto
+                    </td>
+                    <td>
+                        {{otos.NDmixto}}
+                    </td>
+
+                </tr>
+
+                <tr *ngFor="let otos of audiogramas">
+                    <td>
+                        Normal Izquierdo Con Perfil Plano
+                    </td>
+                    <td>
+                        {{otos.NIconperfilplano}}
+                    </td>
+
+
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Normal Izquierdo Descendente
+                        </td>
+                        <td>
+                            {{otos.NIdescendente}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Normal Izquierdo Ascendente
+                        </td>
+                        <td>
+                            {{otos.NIascendente}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Normal Izquierdo Batea
+                        </td>
+                        <td>
+                            {{otos.NIbatea}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Normal Izquierdo Campana
+
+                        </td>
+                        <td>
+                            {{otos.NIcampana}}
+                        </td>
+
+                    </tr>
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Normal Izquierdo Mixto
+
+                        </td>
+                        <td>
+                            {{otos.NImixto}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Derecho Superficial
+
+                        </td>
+                        <td>
+                            {{otos.PDsuperficial}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Derecho Moderada
+
+                        </td>
+                        <td>
+                            {{otos.PDmoderada}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Derecho Moderadas
+
+                        </td>
+                        <td>
+                            {{otos.PDmoderadas}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Derecho Severo
+                        </td>
+                        <td>
+                            {{otos.PDsevera}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Derecho Profundo
+
+                        </td>
+                        <td>
+                            {{otos.PDprofunda}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Derecho Perfil Parcial
+
+                        </td>
+                        <td>
+                            {{otos.PDperfilp}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Derecho Descendente
+                        </td>
+                        <td>
+                            {{otos.PDascendente}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Derecho Batea
+
+                        </td>
+                        <td>
+                            {{otos.PDbatea}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Derecho Campana
+
+                        </td>
+                        <td>
+                            {{otos.PDcampana}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Derecho Mixto
+                        </td>
+                        <td>
+                            {{otos.PDmixto}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Derecho Caracter C
+                        </td>
+                        <td>
+                            {{otos.PDcaracterC}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Derecho Sensorial
+
+                        </td>
+                        <td>
+                            {{otos.PDsensorial}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Derecho Mixto 2
+
+                        </td>
+                        <td>
+                            {{otos.PDmixto2}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Izquierdo Superficial
+
+                        </td>
+                        <td>
+                            {{otos.PIsuperficial}}
+                        </td>
+
+                    </tr>
+
+
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Izquierdo Moderada
+
+                        </td>
+                        <td>
+                            {{otos.PImoderada}}
+                        </td>
+
+                    </tr>
+
+
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Izquierdo Moderadas
+
+                        </td>
+                        <td>
+                            {{otos.PImoderadas}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Izquierdo Severa
+                        </td>
+                        <td>
+                            {{otos.PIsevera}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Izquierdo Profunda
+                        </td>
+                        <td>
+                            {{otos.PIprofunda}}
+                        </td>
+
+                    </tr>
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Izquierdo Perfil Plano
+                        </td>
+                        <td>
+                            {{otos.PIperfilp}}
+                        </td>
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Izquierdo Descendente
+
+                        </td>
+                        <td>
+                            {{otos.PIdescendente}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Izquierdo Ascendente
+
+                        </td>
+                        <td>
+                            {{otos.PIascendente}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Izquierdo Batea
+
+                        </td>
+                        <td>
+                            {{otos.PIbatea}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Izquierdo Campana
+
+                        </td>
+                        <td>
+                            {{otos.PIcampana}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Izquierdo Mixto
+
+                        </td>
+                        <td>
+                            {{otos.PImixto}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Izquierdo Carácter C
+
+                        </td>
+                        <td>
+                            {{otos.PIcaracterC}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Izquierdo Sensorial
+
+                        </td>
+                        <td>
+                            {{otos.PIsensorial}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of audiogramas">
+                        <td>
+                            Parcial Izquierdo Mixto
+
+                        </td>
+                        <td>
+                            {{otos.PImixto2}}
+                        </td>
+
+                    </tr>
+
+                    <br>
+
+                    <h4>Ayer y Hoy</h4>
+
+                    <tr *ngFor="let otos of ayerhoy">
+                        <td>
+                            Moto
+
+                        </td>
+                        <td>
+                            {{otos.Moto}}
+
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of ayerhoy">
+                        <td>
+                            Bus
+
+                        </td>
+                        <td>
+                            {{otos.Bus}}
+                        </td>
+
+                    </tr>
+
+
+                    <tr *ngFor="let otos of ayerhoy">
+                        <td>
+                            Gripe
+
+                        </td>
+                        <td>
+                            {{otos.Gripe}}
+                        </td>
+
+                    </tr>
+
+
+
+                    <tr *ngFor="let otos of ayerhoy">
+                        <td>
+                            RF Sin Proteccion
+
+                        </td>
+                        <td>
+                            {{otos.RFSinProt}}
+                        </td>
+
+                    </tr>
+
+
+                    <tr *ngFor="let otos of ayerhoy">
+                        <td>
+                            Fiesta
+
+                        </td>
+                        <td>
+                            {{otos.Fiesta}}
+                        </td>
+
+                    </tr>
+
+
+                    <tr *ngFor="let otos of ayerhoy">
+                        <td>
+                            Otros
+
+                        </td>
+                        <td>
+                            {{otos.Otros}}
+                        </td>
+
+                    </tr>
+
+
+                    <br>
+                    <h4>Durante Vida</h4>
+
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            Fiebre
+
+                        </td>
+                        <td>
+                            {{otos.Fiebre}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            Consulto Oído
+                        </td>
+                        <td>
+                            {{otos.ConsultoO}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            Operacion de Oído
+                        </td>
+                        <td>
+                            {{otos.OperacionO}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            Perdida De la Conciencia
+
+                        </td>
+                        <td>
+                            {{otos.PerdidaC}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            Paperas
+                        </td>
+                        <td>
+                            {{otos.Paperas}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            Escarlatina
+
+                        </td>
+                        <td>
+                            {{otos.Escarlatina}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            Sarampion
+
+                        </td>
+                        <td>
+                            {{otos.Sarampion}} }}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            Meningitis
+                        </td>
+                        <td>
+                            {{otos.Meningitis}}
+                        </td>
+
+                    </tr>
+
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            Diabetes
+
+                        </td>
+                        <td>
+                            {{otos.Diabetes}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            Enfermedades Riñones
+                        </td>
+
+                        <td>
+                            {{otos.ERinones}}
+                        </td>
+
+                    </tr>
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            Alergias
+                        </td>
+                        <td>
+                            {{otos.Alergias}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            Instrumentos Musicales
+                        </td>
+                        <td>
+                            {{otos.InstrumentosM}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            Sordera En su Familia
+                        </td>
+                        <td>
+                            {{otos.SFamilia}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            Servicio Militar
+                        </td>
+                        <td>
+                            {{otos.ServicioM}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            En casa una Maquinas Ruidosas¿Cuantas horas? </td>
+                        <td>
+                            {{otos.MRCasaHoras}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            Música Fuerte
+                        </td>
+                        <td>
+                            {{otos.MFuerte}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            Pasatiempos ruidosos cacería
+                        </td>
+                        <td>
+                            {{otos.PasatiempoR}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            ¿ Quema cohetes otros?
+                        </td>
+                        <td>
+                            {{otos.Cohetes}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            ¿Usa o uso armas de fuego? ¿Años y Calibre? </td>
+                        <td>
+                            {{otos.ArmasF}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            ¿Ha usado gentamicina, Kanamicina?
+                        </td>
+                        <td>
+                            {{otos.Gentamicina}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            ¿ Ha usado quinina, estreptomicina?
+                        </td>
+                        <td>
+                            {{otos.Quinina}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            Trabaja con quimicos o insecticidas. ¿Cuales?
+                        </td>
+                        <td>
+                            {{otos.Quimicos}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of durantev">
+                        <td>
+                            Anotar trabajos anteriores si laboro
+                        </td>
+                        <td>
+                            {{otos.TrabajoAnt}}
+                        </td>
+                    </tr>
+
+
+                    <br>
+                    <h4>Ultimos Meses</h4>
+
+                    <tr *ngFor="let otos of ultimosm">
+                        <td>
+                            Dolor de Oídos
+                        </td>
+                        <td>
+                            {{otos.DolorO}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of ultimosm">
+                        <td>
+                            Supuracion o Sangrado
+                        </td>
+                        <td>
+                            {{otos.SupuracionS}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of ultimosm">
+                        <td>
+                            Ruido, Tinitus o Zumbidos
+                        </td>
+                        <td>
+                            {{otos.RuidoTZ}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of ultimosm">
+                        <td>
+                            Mareo/Vertigo
+                        </td>
+                        <td>
+                            {{otos.MareoV}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of ultimosm">
+                        <td>
+                            Sordera Subita
+                        </td>
+                        <td>
+                            {{otos.SorderaS}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of ultimosm">
+                        <td>
+                            Sordera Fluctuante
+                        </td>
+                        <td>
+                            {{otos.SorderaF}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of ultimosm">
+                        <td>
+                            Tapados/Malestar/Llenura
+                        </td>
+                        <td>
+                            {{otos.TapadoML}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of ultimosm">
+                        <td>
+                            Dolor o Molestia Al ruido D.I.A
+                        </td>
+                        <td>
+                            {{otos.DolorMR}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of ultimosm">
+                        <td>
+                            Golpes Fuerte en la cabeza u Oido
+                        </td>
+                        <td>
+                            {{otos.GolpesCO}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of ultimosm">
+                        <td>
+                            Presion arterial Alta
+                        </td>
+                        <td>
+                            {{otos.PAA}}
+                        </td>
+                    </tr>
+                    <tr *ngFor="let otos of ultimosm">
+                        <td>
+                            Medicinas Permanentes que usa
+                        </td>
+                        <td>
+                            {{otos.MedicamentosP}}
+                        </td>
+                    </tr>
+
+        </table>
+    </div>
+</div>

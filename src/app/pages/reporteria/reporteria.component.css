@@ -1,0 +1,16 @@
+.pacientesLista {
+    display: inline-block;
+    width: 41rem;
+}
+
+label {
+    line-height: 2;
+}
+
+.table {
+    margin-top: 2rem;
+}
+
+tr {
+    border: 0 0 1px 0 solid black;
+}

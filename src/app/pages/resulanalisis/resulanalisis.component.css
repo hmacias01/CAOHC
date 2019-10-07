@@ -1,0 +1,9 @@
+.resultado-vw {
+    display: inline-block;
+    width: 41rem;
+    margin-top: 1.5rem;
+}
+
+.form-imageUpload {
+    margin-top: 2rem;
+}

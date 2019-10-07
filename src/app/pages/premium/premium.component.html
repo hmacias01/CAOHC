@@ -1,0 +1,43 @@
+<div class="container">
+    <form #f="ngForm" (submit)="ver( f )">
+        <div>
+
+            <h5>Usuario: {{usuario.nombre}}</h5>
+
+            <h5>Correo: {{usuario.email}}</h5>
+
+
+        </div>
+
+        <div class="entry">
+            <h6>Acuerdo de Uso: </h6>
+            <p>La pagina FIXALL reconoce expresamente a los usuarios la plena y exclusiva titularidad y propiedad de todos y cada uno de los foros creados en esta plataforma. Dicho contenido que se muestra en la plataforma sera monitoreado que cumpla con
+                todas las normativas de los derechos de autor, y que no se vea reflejado, contenido obseno o violento que pueda perjudicar a los demas usuarios
+            </p>
+
+
+
+            <div class="flex-sb-m w-full p-t-3 p-b-24">
+                <div class="contact100-form-checkbox">
+                    <input [(ngModel)]="acepto" name="acepto" value="acepto" class="input-checkbox100" id="ckb1" type="checkbox">
+                    <label class="label-checkbox100" for="ckb1">
+    Acepto los Acuerdos
+    </label>
+                </div>
+
+            </div>
+            <div class="container-login100-form-btn m-t-17">
+                <button (click)="salvarUsuario(usuario)" [disabled]="!acepto" class="btn btn-primary" type="submit">
+    Acepto
+    </button>
+            </div>
+
+        </div>
+
+
+
+
+
+    </form>
+
+</div>

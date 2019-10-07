@@ -1,0 +1,200 @@
+<!-- <div class="wrap-login100 p-t-50 p-b-90">
+
+    <form [formGroup]="forma" class="login100-form validate-form flex-sb flex-w" (ngSubmit)="guardarempresa()">
+
+        <div class="form-group">
+            <label>Nombre de la Empresa</label>
+            <input formControlName="nombre" name="nombre" type="text" class="form-control" required>
+        </div>
+
+        <!-- <div class="form-group">
+            <label>Detalle</label>
+            <textarea [ngModel]="detalle" name="detalle" class="form-control" rows="8"></textarea>
+        </div> -->
+
+
+<!-- <div class="container">
+
+            <button type="submit" class="btn btn-primary">Subir</button>
+
+        </div>
+
+
+
+    </form> -->
+
+<!-- </div> -->
+
+<div class="form-vw">
+
+    <div class="container form-container">
+        <form [formGroup]="forma2" (ngSubmit)="GuardarPacientes()">
+            <div class="row justify-content-center container-row">
+                <h3 class="">FORMULARIO</h3>
+            </div>
+
+            <h4 class="text-center">AUDILOGIA INICIAL</h4>
+            <!-- <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label for="examenIngreso">Ingreso</label>
+                        <input type="text" class="form-control" id="examenIngreso" placeholder="Ingreso">
+                    </div>
+                    <div class="col-3">
+                        <label for="examenIngreso">Tipo de Examen</label>
+                        <div class="row">
+                            <div class="col">
+                                <select id="inputState" class="form-control">
+                                    <option selected>Semanal</option>
+                                    <option>Mensual</option>
+                                    <option>Anual</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <label for="examenIngreso">Por STS</label>
+                        <div class="row">
+                            <div class="col">
+                                <select id="inputState" class="form-control">
+                                    <option selected>No</option>
+                                    <option>Si</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label for="examenotros">Otros</label>
+                        <input type="text" class="form-control" id="examenotros" placeholder="Otros">
+                    </div>
+                    <div class="col">
+                        <label class="date-label" for="examenFecha">Fecha</label>
+                        <input type="date" class="form-control date-input" id="examenFecha">
+                    </div>
+                </div>
+            </div> -->
+            <div>
+                <div class="row">
+                    <div class="col">
+                        <label for="examenNombre">Nombre</label>
+                        <input formControlName="Nombre" name="Nombre" type="text" class="form-control" id="examenNombre">
+                    </div>
+                    <div class="col">
+                        <label for="examenCedula">Cedula</label>
+                        <input formControlName="Cedula" name="Cedula" type="text" class="form-control" id="examenCedula">
+                    </div>
+                    <div class="col">
+                        <label for="examenEdad">Edad</label>
+                        <input formControlName="Edad" name="Edad" type="number" class="form-control" id="examenEdad" placeholder="Edad">
+                    </div>
+                    <div class="col-2">
+                        <label for="examenIngreso">Genero</label>
+                        <div class="row">
+                            <div class="col">
+                                <select formControlName="Genero" name="Genero" id="generoSelect" class="form-control">
+                                    <option value="M" selected>M</option>
+                                    <option value="F">F</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label class="date-label" for="examenFechaContratacion">Fecha de contratacion</label>
+                        <input formControlName="F_Contratacion" name="F_Contratacion" type="date" class="form-control date-input" id="examenFechaContratacion">
+                    </div>
+                    <div class="col">
+                        <label for="examenPuestoTrabajo">Puesto de trabajo</label>
+                        <input formControlName="Puesto" name="Puesto" type="text" class="form-control" id="examenPuestoTrabajo" placeholder="Puesto de trabajo">
+                    </div>
+                    <div class="col-3">
+                        <label for="examenTurno">Turno</label>
+                        <div class="row">
+                            <div class="col">
+                                <select formControlName="Turno" name="Turno" id="examenTurno" class="form-control">
+                                    <option value="D" selected>Diurno</option>
+                                    <option value="N">Nocturno</option>
+                                    <option value="M">Mixto</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="exameNumHoras">Numero de horas</label>
+                        <input formControlName="NHoras" name="NHoras" type="number" class="form-control" id="exameNumHoras" placeholder="Numero de horas">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="nombreEmpresa">Nombre de la empresa </label>
+                        <input formControlName="empresa" name="empresa" type="text" class="form-control" id="nombreEmpresa">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label for="examenNombre">Nivel de ruido dBA</label>
+                        <input formControlName="RuidoDba" name="RuidoDba" type="text" class="form-control" id="exameNivRuidoDBA">
+                    </div>
+                    <div class="col">
+                        <label for="exameNivRuidoDBA">Tipo de ruido dBA</label>
+                        <input formControlName="Tipo" name="Tipo" type="text" class="form-control" id="exameNivRuidoDBA" placeholder="Tipo de RuidoDba">
+                        <!-- <div class="form-check form-check-inline">
+                            <input formControlName="Tipo" name="Tipo" class="form-check-input" type="checkbox" id="exameNivRuidoDBA-noSe" value="No-se">
+                            <label class="form-check-label" for="exameNivRuidoDBA-noSe">No se</label>
+                        </div> -->
+                    </div>
+                    <div class="col">
+                        <label for="examenProtAuditivos">Usa protectores auditivos</label>
+                        <div class="row">
+                            <div class="col">
+                                <select formControlName="Proteccion" name="Proteccion" id="examenProtAuditivos" class="form-control">
+                                    <option value="No" selected>No</option>
+                                    <option value="Si">Si</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="examenProteccion">Protectores Auditivos</label>
+                                <input formControlName="TipoProteccion" name="TipoProteccion" type="text" class="form-control" id="examenProteccion">
+                            </div>
+                            <div class="col-12">
+                                <label for="examenOtrosProtAuditivos">Otros</label>
+                                <input formControlName="OtrosProteccion" name="OtrosProteccion" type="text" class="form-control input-inline" id="examenotros" placeholder="Otros">
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check form-check-inline">
+                                    <label for="examenProtAuditivosMolestan ">Le molestan</label>
+                                    <input formControlName="Molestia" name="Molestia" type="text " class="form-control input-inline " id="examenProtAuditivosMolestan " placeholder="Escriba Si o No ">
+                                </div>
+                            </div>
+                            <div class="col-12 ">
+                                <div class="form-check form-check-inline ">
+                                    <label for="examenProtAuditivosMolestias">Molestias</label>
+                                    <input formControlName="MolestiasDetalle" name="MolestiasDetalle" type="text" class="form-control input-inline" id="examenProtAuditivosMolestias" placeholder="Escriba las molestias">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ExamenAudiometro">Audiometro</label>
+                    <textarea formControlName="Audiometro" name="Audiometro" class="form-control" id="ExamenAudiometro" placeholder="Aqui se pondra la marca, el modelo y Serie con su calibracion Anual"></textarea>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <button type="submit" class="btn btn-primary">Subir</button>
+
+            </div>
+        </form>
+    </div>
+</div>

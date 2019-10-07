@@ -1,0 +1,81 @@
+<div class="wrap-login100 p-t-50 p-b-90 resultado-vw">
+
+    <form ngNativeValidate #f="ngForm" class="login100-form validate-form flex-sb flex-w">
+
+        <!-- <div class="wrap-input100 validate-input m-b-16">
+          <input [ngModel]="usuario.nombre" name="nombre" class="input100" type="text" required placeholder="Nombre del Usuario">
+          <span class="focus-input100"></span>
+      </div>
+
+
+      <div class="wrap-input100 validate-input m-b-16">
+          <input [ngModel]="usuario.email" name="email" [disabled]="usuario.google" class="input100" type="text" required placeholder="La Contraceña de Usuario">
+          <span class="focus-input100"></span>
+      </div>
+
+
+      <div class="container-login100-form-btn m-t-17">
+          <button class="login100-form-btn" type="submit">
+          Salvar
+          </button>
+      </div> -->
+        <div class="form-group container">
+            <label>Introdusca el Numero de Cedula</label>
+            <input #input type="text" id="cedula" class="form-control" required>
+            <button (click)="buscarPacientes( input.value )" class="btn btn-primary">Buscar</button>
+        </div>
+        <tr *ngFor="let pacientes of paciente2">
+
+            <div class="form-group">
+                <label>Nombre del Paciente: </label>
+
+                <input [ngModel]="pacientes.Nombre" name="Nombre" type="text" class="form-control" required>
+            </div>
+
+            <!-- <td> {{ pacientes.Nombre }} </td> -->
+            <td>
+
+                <!-- <img [src]="pacientes.img | imagen" class="w150">
+                <img *ngIf="imagenTemp" [src]="imagenTemp" class="w150"> -->
+            </td>
+
+
+        </tr>
+        <a href=" imgresult "> {{ imgresult }}</a>
+
+        <!-- <div class="form-group">
+            <label>Nombre del Paciente: </label>
+           
+            <input name="Nombre" type="text" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label>Empresa</label>
+            <input name="empresa" type="text" class="form-control" required>
+        </div> -->
+
+        <!-- <div class="container">
+
+            <button (click)="buscarPacientes( input.value )" class="btn btn-primary">Buscar</button>
+
+        </div> -->
+
+    </form>
+</div>
+
+<div class="col-md-8 p-3 mb-2 bg-light text-dark form-imageUpload" align="center">
+
+    <br>
+    <img *ngIf="!imagenTemp" [src]="imag | imagen" class="w150">
+    <img *ngIf="imagenTemp" [src]="imagenTemp" class="w150">
+    <input type="file" (change)="seleccionImage($event.target.files[0])">
+
+    <br>
+    <p></p>
+
+    <div class="form-group row">
+        <div class="col-sm-10 ">
+            <button [disabled]="!imagenSubir" type="submit " class="btn btn-primary "> <i class="fa fa-save"></i> Actualizar Foto</button>
+        </div>
+    </div>
+</div>

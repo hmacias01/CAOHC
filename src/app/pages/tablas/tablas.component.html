@@ -1,0 +1,699 @@
+<div class="form-vw">
+    <div class="container form-container pacientesLista">
+        <form [formGroup]="forma" (ngSubmit)="GuardarUltimoMeses()">
+            <div class="row justify-content-center container-row">
+                <h3 class="">Historia Clinica Otologica</h3>
+            </div>
+            <div class="table-responsive" style="margin-top: 2rem">
+                <label style="color:cadetblue">D. I. A. = Derecha, Izquierda, Ambas</label>
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">En los ultimos meses ha tenido</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Dolor de o&iacute;dos?
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="DolorO" name="DolorO" type="radio" class="custom-control-input" id="HCOdolorOidos-D" value="D">
+                                        <label class="custom-control-label" for="HCOdolorOidos-D">D</label>
+                                    </div>
+
+                                    <!-- Default inline 2-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="DolorO" name="DolorO" type="radio" class="custom-control-input" id="HCOdolorOidos-I" value="I">
+                                        <label class="custom-control-label" for="HCOdolorOidos-I">I</label>
+                                    </div>
+
+                                    <!-- Default inline 3-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="DolorO" name="DolorO" type="radio" class="custom-control-input" id="HCOdolorOidos-A" value="A">
+                                        <label class="custom-control-label" for="HCOdolorOidos-A">A</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Supuracion o sangrado?
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="SupuracionS" name="SupuracionS" type="radio" type="radio" class="custom-control-input" id="HCOsos-D" value="D">
+                                        <label class="custom-control-label" for="HCOsos-D">D</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="SupuracionS" name="SupuracionS" type="radio" type="radio" class="custom-control-input" id="HCOsos-I" value="I">
+                                        <label class="custom-control-label" for="HCOsos-I">I</label>
+                                    </div>
+
+                                    <!-- Default inline A-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="SupuracionS" name="SupuracionS" type="radio" type="radio" class="custom-control-input" id="HCOsos-A" value="A">
+                                        <label class="custom-control-label" for="HCOsos-A">A</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Ruido,tinitus o zumbidos
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="RuidoTZ" name="RuidoTZ" type="radio" class="custom-control-input" id="HCOrtz-D" value="D">
+                                        <label class="custom-control-label" for="HCOrtz-D">D</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="RuidoTZ" name="RuidoTZ" type="radio" class="custom-control-input" id="HCOrtz-I" value="I">
+                                        <label class="custom-control-label" for="HCOrtz-I">I</label>
+                                    </div>
+
+                                    <!-- Default inline A-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="RuidoTZ" name="RuidoTZ" type="radio" class="custom-control-input" id="HCOrtz-A" value="A">
+                                        <label class="custom-control-label" for="HCOrtz-A">A</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Mareo/Vertigo
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="MareoV" name="MareoV" type="radio" class="custom-control-input" id="HCOmareoVertigo-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOmareoVertigo-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="MareoV" name="MareoV" type="radio" class="custom-control-input" id="HCOmareoVertigo-No" value="No">
+                                        <label class="custom-control-label" for="HCOmareoVertigo-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Sordera s&uacute;bita
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="SorderaS" name="SorderaS" type="radio" class="custom-control-input" id="HCOsorderaSubita-D" value="D">
+                                        <label class="custom-control-label" for="HCOsorderaSubita-D">D</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="SorderaS" name="SorderaS" type="radio" class="custom-control-input" id="HCOsorderaSubita-I" value="I">
+                                        <label class="custom-control-label" for="HCOsorderaSubita-I">I</label>
+                                    </div>
+
+                                    <!-- Default inline A-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="SorderaS" name="SorderaS" type="radio" class="custom-control-input" id="HCOsorderaSubita-A" value="A">
+                                        <label class="custom-control-label" for="HCOsorderaSubita-A">A</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>Sordera fluctuante
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="SorderaF" name="SorderaF" type="radio" class="custom-control-input" id="HCOsorderaFluctuante-D" value="D">
+                                        <label class="custom-control-label" for="HCOsorderaFluctuante-D">D</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="SorderaF" name="SorderaF" type="radio" class="custom-control-input" id="HCOsorderaFluctuante-I" value="I">
+                                        <label class="custom-control-label" for="HCOsorderaFluctuante-I">I</label>
+                                    </div>
+
+                                    <!-- Default inline A-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="SorderaF" name="SorderaF" type="radio" class="custom-control-input" id="HCOsorderaFluctuante-A" value="A">
+                                        <label class="custom-control-label" for="HCOsorderaFluctuante-A">A</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>Tapados/Malestar/Llenura
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="TapadoML" name="TapadoML" type="radio" class="custom-control-input" id="HCOtpl-D" value="D">
+                                        <label class="custom-control-label" for="HCOtpl-D">D</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="TapadoML" name="TapadoML" type="radio" class="custom-control-input" id="HCOtpl-I" value="I">
+                                        <label class="custom-control-label" for="HCOtpl-I">I</label>
+                                    </div>
+
+                                    <!-- Default inline A-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="TapadoML" name="TapadoML" type="radio" class="custom-control-input" id="HCOtpl-A" value="A">
+                                        <label class="custom-control-label" for="HCOtpl-A">A</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8</th>
+                            <td>Dolor o molestia al ruido
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="DolorMR" name="DolorMR" type="radio" class="custom-control-input" id="HCOdolorMR-D" value="D">
+                                        <label class="custom-control-label" for="HCOdolorMR-D">D</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="DolorMR" name="DolorMR" type="radio" class="custom-control-input" id="HCOdolorMR-I" value="I">
+                                        <label class="custom-control-label" for="HCOdolorMR-I">I</label>
+                                    </div>
+
+                                    <!-- Default inline A-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="DolorMR" name="DolorMR" type="radio" class="custom-control-input" id="HCOdolorMR-A" value="A">
+                                        <label class="custom-control-label" for="HCOdolorMR-A">A</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">9</th>
+                            <td>Golpes fuertes en la cabeza u o&iacute;dos
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="GolpesCO" name="GolpesCO" type="radio" class="custom-control-input" id="HCOgolpesFuertesCO-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOgolpesFuertesCO-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="GolpesCO" name="GolpesCO" type="radio" class="custom-control-input" id="HCOgolpesFuertesCO-No" value="No">
+                                        <label class="custom-control-label" for="HCOgolpesFuertesCO-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10</th>
+                            <td>Presion arterial alta
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="PAA" name="PAA" type="radio" class="custom-control-input" id="HCOprAlta-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOprAlta-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="PAA" name="PAA" type="radio" class="custom-control-input" id="HCOprAlta-No" value="No">
+                                        <label class="custom-control-label" for="HCOprAlta-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">11</th>
+                            <td>Medicinas permanentes que usa
+                                <input formControlName="MedicamentosP" name="MedicamentosP" type="text" class="form-control" id="HCOmedicinasP" placeholder="Medicinas permanentes">
+                                <small id="emailHelp" class="form-text text-muted">Separe los nombres con una ,</small>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Durante su vida</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">12</th>
+                            <td>Fiebre muy alta cuando ni&ntilde;o
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Fiebre" name="Fiebre" type="radio" class="custom-control-input" id="HCOfiebreAltaN-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOfiebreAltaN-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Fiebre" name="Fiebre" type="radio" class="custom-control-input" id="HCOfiebreAltaN-No" value="No">
+                                        <label class="custom-control-label" for="HCOfiebreAltaN-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">13</th>
+                            <td>Consulto por oidos‎ ¿Porque?
+                                <input formControlName="ConsultoO" name="ConsultoO" type="text" class="form-control" id="HCOconsOidos" placeholder="Consulto por oidos">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">14</th>
+                            <td>Operacion de o&iacute;dos ¿Cual?
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="OperacionO" name="OperacionO" type="radio" class="custom-control-input" id="HCOoprOidos-D" value="D">
+                                        <label class="custom-control-label" for="HCOoprOidos-D">D</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="OperacionO" name="OperacionO" type="radio" class="custom-control-input" id="HCOoprOidos-I" value="I">
+                                        <label class="custom-control-label" for="HCOoprOidos-I">I</label>
+                                    </div>
+
+                                    <!-- Default inline A-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="OperacionO" name="OperacionO" type="radio" class="custom-control-input" id="HCOoprOidos-A" value="A">
+                                        <label class="custom-control-label" for="HCOoprOidos-A">A</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">15</th>
+                            <td>Perdida de la conciencia
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="PerdidaC" name="PerdidaC" type="radio" class="custom-control-input" id="HCOperConciencia-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOperConciencia-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="PerdidaC" name="PerdidaC" type="radio" class="custom-control-input" id="HCOperConciencia-No" value="No">
+                                        <label class="custom-control-label" for="HCOperConciencia-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">16</th>
+                            <td>Paperas
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Paperas" name="Paperas" type="radio" class="custom-control-input" id="HCOpaperas-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOpaperas-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Paperas" name="Paperas" type="radio" class="custom-control-input" id="HCOpaperas-No" value="No">
+                                        <label class="custom-control-label" for="HCOpaperas-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">17</th>
+                            <td>Escarlatina
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Escarlatina" name="Escarlatina" type="radio" class="custom-control-input" id="HCOescarlatina-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOescarlatina-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Escarlatina" name="Escarlatina" type="radio" class="custom-control-input" id="HCOescarlatina-No" value="No">
+                                        <label class="custom-control-label" for="HCOescarlatina-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">18</th>
+                            <td>Sarampi&oacute;n
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Sarampion" name="Sarampion" type="radio" class="custom-control-input" id="HCOsarampion-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOsarampion-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Sarampion" name="Sarampion" type="radio" class="custom-control-input" id="HCOsarampion-No" value="No">
+                                        <label class="custom-control-label" for="HCOsarampion-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">19</th>
+                            <td>Meningitis
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Meningitis" name="Meningitis" type="radio" class="custom-control-input" id="HCOmeningitis-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOmeningitis-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Meningitis" name="Meningitis" type="radio" class="custom-control-input" id="HCOmeningitis-No" value="No">
+                                        <label class="custom-control-label" for="HCOmeningitis-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">20</th>
+                            <td>Diabetes
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Diabetes" name="Diabetes" type="radio" class="custom-control-input" id="HCOdiabetes-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOdiabetes-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Diabetes" name="Diabetes" type="radio" class="custom-control-input" id="HCOdiabetes-No" value="No">
+                                        <label class="custom-control-label" for="HCOdiabetes-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">21</th>
+                            <td>Enfermedad del ri&ntilde;on
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="ERinones" name="ERinones" type="radio" class="custom-control-input" id="HCOenfRinon-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOenfRinon-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="ERinones" name="ERinones" type="radio" class="custom-control-input" id="HCOenfRinon-No" value="No">
+                                        <label class="custom-control-label" for="HCOenfRinon-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">22</th>
+                            <td>Alergias
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Alergias" name="Alergias" type="radio" class="custom-control-input" id="HCOalergias-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOalergias-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Alergias" name="Alergias" type="radio" class="custom-control-input" id="HCOalergias-No" value="No">
+                                        <label class="custom-control-label" for="HCOalergias-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">23</th>
+                            <td>Ejecuta instrumentos de musica
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="InstrumentosM" name="InstrumentosM" type="radio" class="custom-control-input" id="HCOinsMusica-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOinsMusica-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="InstrumentosM" name="InstrumentosM" type="radio" class="custom-control-input" id="HCOinsMusica-No" value="No">
+                                        <label class="custom-control-label" for="HCOinsMusica-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">24</th>
+                            <td>Sordera en su familia
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="SFamilia" name="SFamilia" type="radio" class="custom-control-input" id="HCOsorFamilia-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOsorFamilia-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="SFamilia" name="SFamilia" type="radio" class="custom-control-input" id="HCOsorFamilia-No" value="No">
+                                        <label class="custom-control-label" for="HCOsorFamilia-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">25</th>
+                            <td>Servicio militar
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="ServicioM" name="ServicioM" type="radio" class="custom-control-input" id="HCOserMilitar-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOserMilitar-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="ServicioM" name="ServicioM" type="radio" class="custom-control-input" id="HCOserMilitar-No" value="No">
+                                        <label class="custom-control-label" for="HCOserMilitar-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">26</th>
+                            <td>En casa usa maquina ruidosa ¿Cuantas horas?
+                                <input formControlName="MRCasaHoras" name="MRCasaHoras" type="text" class="form-control" id="HCOmaqRuidosa" placeholder="¿Cuantas horas?">
+                                <small id="emailHelp" class="form-text text-muted">Ponga el numero de horas.</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">27</th>
+                            <td>Musica fuerte/Audifonos ¿Cuantas horas?
+                                <input formControlName="MFuerte" name="MFuerte" type="text" class="form-control" id="HCOmusFuerte" placeholder="Cuantas horas">
+                                <small id="emailHelp" class="form-text text-muted">Ponga el numero de horas.</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">28</th>
+                            <td>Pasatiempo ruidoso caceria
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="PasatiempoR" name="PasatiempoR" type="radio" class="custom-control-input" id="HCOpasRuidoso-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOpasRuidoso-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="PasatiempoR" name="PasatiempoR" type="radio" class="custom-control-input" id="HCOpasRuidoso-No" value="No">
+                                        <label class="custom-control-label" for="HCOpasRuidoso-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">29</th>
+                            <td>Quema cohetes u otros?
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Cohetes" name="Cohetes" type="radio" class="custom-control-input" id="HCOqueCohetes-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOqueCohetes-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Cohetes" name="Cohetes" type="radio" class="custom-control-input" id="HCOqueCohetes-No" value="No">
+                                        <label class="custom-control-label" for="HCOqueCohetes-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">30</th>
+                            <td>Usa o us&oacute; armas de fuego ¿Años y calibre?
+                                <input formControlName="ArmasF" name="ArmasF" type="text" class="form-control" id="HCOarmCalibre" placeholder="Años y calibre">
+                                <small id="emailHelp" class="form-text text-muted">Separe los nombres con una ,</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">31</th>
+                            <td>Ha usado gentamicina kanamicina
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Gentamicina" name="Gentamicina" type="radio" class="custom-control-input" id="HCOgenKanamicina-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOgenKanamicina-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Gentamicina" name="Gentamicina" type="radio" class="custom-control-input" id="HCOgenKanamicina-No" value="No">
+                                        <label class="custom-control-label" for="HCOgenKanamicina-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">32</th>
+                            <td>Ha usado quinina, estreptomicina
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Quinina" name="Quinina" type="radio" class="custom-control-input" id="HCOquinEstreptomicina-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOquinEstreptomicina-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Quinina" name="Quinina" type="radio" class="custom-control-input" id="HCOquinEstreptomicina-No" value="No">
+                                        <label class="custom-control-label" for="HCOquinEstreptomicina-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">33</th>
+                            <td>Trabaja con qu&iacute;micos o insecticidas ¿Cuales?
+                                <input formControlName="Quimicos" name="Quimicos" type="text" class="form-control" id="HCOquiInsecticidas" placeholder="¿Cuales?">
+                                <small id="emailHelp" class="form-text text-muted">Separe los nombres con una ,</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">34</th>
+                            <td>Anotar trabajos anteriores si labor&oacute; con ruido y/o qu&iacute;micos y cuantos a&ntilde;os
+                                <input formControlName="TrabajoAnt" name="TrabajoAnt" type="text" class="form-control" id="HCOtraAnteriores" placeholder="Anotar trabajos anteriores y qumicos">
+                                <small id="emailHelp" class="form-text text-muted">Separe los nombres con una ,</small>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Entre ayer y hoy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">35</th>
+                            <td>Lleg&oacute; en motocicleta a su examen
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Moto" name="Moto" type="radio" class="custom-control-input" id="HCOmotExamen-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOmotExamen-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Moto" name="Moto" type="radio" class="custom-control-input" id="HCOmotExamen-No" value="No">
+                                        <label class="custom-control-label" for="HCOmotExamen-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">36</th>
+                            <td>Lleg&oacute; en bus y sentado cerca del ruido del motor y por mas de 1 hora
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Bus" name="Bus" type="radio" class="custom-control-input" id="HCOruiMotor-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOruiMotor-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Bus" name="Bus" type="radio" class="custom-control-input" id="HCOruiMotor-No" value="No">
+                                        <label class="custom-control-label" for="HCOruiMotor-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">37</th>
+                            <td>Sufre gripe/resfriado y oidos tapados
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Gripe" name="Gripe" type="radio" class="custom-control-input" id="HCOgriResfriado-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOgriResfriado-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Gripe" name="Gripe" type="radio" class="custom-control-input" id="HCOgriResfriado-No" value="No">
+                                        <label class="custom-control-label" for="HCOgriResfriado-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">38</th>
+                            <td>Estuvo con ruido fuerte sin proteccion
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="RFSinProt" name="RFSinProt" type="radio" class="custom-control-input" id="HCOruiSinProteccion-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOruiSinProteccion-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="RFSinProt" name="RFSinProt" type="radio" class="custom-control-input" id="HCOruiSinProteccion-No" value="No">
+                                        <label class="custom-control-label" for="HCOruiSinProteccion-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">39</th>
+                            <td>Asistio a una fiesta con musica fuerte
+                                <div class="radio-container">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Fiesta" name="Fiesta" type="radio" class="custom-control-input" id="HCOfieMusicaFuerte-Si" value="Si">
+                                        <label class="custom-control-label" for="HCOfieMusicaFuerte-Si">Si</label>
+                                    </div>
+
+                                    <!-- Default inline I-->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input formControlName="Fiesta" name="Fiesta" type="radio" class="custom-control-input" id="HCOfieMusicaFuerte-No" value="No">
+                                        <label class="custom-control-label" for="HCOfieMusicaFuerte-No">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">40</th>
+                            <td>Otros datos complementarios
+                                <input formControlName="Otros" name="Otros" type="text" class="form-control" id="HCOdatosComplementarios" placeholder="Datos complementarios">
+                                <small id="emailHelp" class="form-text text-muted">Escriba algun otro dato.</small>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+            <div class="container">
+
+                <button type="submit" class="btn btn-primary">Subir</button>
+
+            </div>
+        </form>
+    </div>
+</div>

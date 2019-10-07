@@ -1,0 +1,101 @@
+<div class="row animated fadeIn" *ngIf="cargando">
+
+    <div class="col-sm-12">
+
+        <div class="alert alert-warning text-center">
+            <strong>Cargando</strong>
+            <br>
+            <i class="fa fa-refresh fa-spin fa-2x"></i>
+            <br>
+            <span>Espere por favor</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="row animated fadeIn" *ngIf="!cargando">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <h3 class="card-title">Registros ( <small>  </small> )</h3>
+
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Usuario</th>
+                            <th>Titulo::Detalle</th>
+                            <th></th>
+                            <th>Fecha</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+
+
+                    <tbody>
+                        <tr *ngFor="let foro of foros">
+                            <td class="w70">
+                                <img [src]=" foro.usuario.img | imagen " class="img-50 img-circle pointer"> {{ foro.usuario.nombre }}
+                            </td>
+                            <td>
+                                {{ foro.titulo }} :: {{ foro.detalle }}
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                {{ foro.fecha }}
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <button (click)="cambiardesde(-5)" class="btn btn-secondary">
+              Atras
+            </button>
+
+                <button (click)="cambiardesde(5)" class="btn btn-secondary">
+                Delante
+                
+            </button>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="wrap-login100 p-t-50 p-b-90">
+
+    <form #f="ngForm" class="login100-form validate-form flex-sb flex-w" (ngSubmit)="guardarforo( f )">
+
+        <div class="form-group">
+            <label>Titulo</label>
+            <input [ngModel]="titulo" name="titulo" type="text" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label>Detalle</label>
+            <textarea [ngModel]="detalle" name="detalle" class="form-control" rows="3"></textarea>
+        </div>
+
+
+        <div class="container">
+
+            <button type="submit" class="btn btn-primary">Subir</button>
+
+        </div>
+
+
+
+    </form>
+
+</div>

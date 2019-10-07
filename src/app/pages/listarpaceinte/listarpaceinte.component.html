@@ -1,0 +1,90 @@
+<div class="form-vw">
+    <div class="container pacientesLista">
+        <form action="">
+            <div class="form-group">
+                <label for="Cedula">Numero de Cedula</label>
+                <input #input type="text" class="form-control" id="Cedula" aria-describedby="emailHelp" placeholder="Ingrese numero de cedula">
+                <button (click)="buscarPacientes( input.value )" class="btn btn-primary" style="margin-top:1rem">Buscar</button>
+            </div>
+        </form>
+    </div>
+    <div class="container pacientesLista">
+        <div class="row justify-content-center container-row">
+            <h3 class="">Reporteria de datos personales de paciente</h3>
+        </div>
+        <table class="table table-bordered ">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nombre del Paciente</th>
+                    <th>Empresa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pacientes of paciente">
+                    <td>
+                        Nombre del Paciente
+                    </td>
+                    <td>
+                        {{ pacientes.Nombre }}
+                    </td>
+                    <td>
+                </tr>
+                <tr *ngFor="let pacientes of paciente">
+                    <td>
+                        Nombre de la Empresa
+                    </td>
+                    <td>
+                        {{ pacientes.empresa }}
+                    </td>
+                    <td>
+                </tr>
+                <tr *ngFor="let pacientes of paciente">
+                    <td>
+                        Edad del Paciente
+                    </td>
+                    <td>
+                        {{ pacientes.Edad }}
+                    </td>
+                    <td>
+                </tr>
+                <tr *ngFor="let pacientes of paciente">
+                    <td>
+                        Puesto en la Empresa
+                    </td>
+                    <td>
+                        {{ pacientes.Puesto }}
+                    </td>
+                    <td>
+                </tr>
+                <tr *ngFor="let pacientes of paciente">
+                    <td>
+                        Turno en que Labora
+                    </td>
+                    <td>
+                        {{ pacientes.Turno }}
+                    </td>
+                    <td>
+                </tr>
+                <tr *ngFor="let pacientes of paciente">
+                    <td>
+                        Numero de Horas Laborales
+                    </td>
+                    <td>
+                        {{ pacientes.NHoras }}
+                    </td>
+                    <td>
+                </tr>
+                <tr *ngFor="let pacientes of paciente">
+                    <td>
+                        Fecha en que fue Contratado
+                    </td>
+                    <td>
+                        {{ pacientes.F_Contratacion }}
+                    </td>
+                    <td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
